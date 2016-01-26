@@ -218,8 +218,10 @@ public class CityConnect {
 	 * @return Returns the position of the route represented by 
 	 *    newStartLocation and newEndLocation. Returns NOT_FOUND if not found.
 	 */
-	private static int  getPositionOfExistingRoute(String newStartLocation,
-			String newEndLocation) {
+	//private static int  getPositionOfExistingRoute(String newStartLocation,
+	//		String newEndLocation) {
+	private static int  getPositionOfExistingRoute(String currentStartLocation,
+			String currentEndLocation) {
 		for (int i = 0; i < route.length; i++) {
 
 			String existingStartLocation = route[i][STORAGE_POSITION_START_LOCATION];
@@ -227,8 +229,10 @@ public class CityConnect {
 
 			if (existingStartLocation == null) { //beginning of empty slots
 				return NOT_FOUND; 
+		//	} else if (sameRoute(existingStartLocation, existingEndLocation,
+		//			newStartLocation, newEndLocation)) { 
 			} else if (sameRoute(existingStartLocation, existingEndLocation,
-					newStartLocation, newEndLocation)) { 
+					currentStartLocation, currentEndLocation)) { 
 				return i;
 			}
 		}
