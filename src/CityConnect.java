@@ -331,7 +331,8 @@ public class CityConnect {
 	}
 
 	private static String removeFirstWord(String userCommand) {
-		return userCommand.replace(getFirstWord(userCommand), "").trim();
+		String commandTypeString = userCommand.replace(getFirstWord(userCommand), "").trim();
+		return commandTypeString;
 	}
 
 	private static String getFirstWord(String userCommand) {
