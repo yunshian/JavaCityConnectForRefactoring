@@ -207,8 +207,7 @@ public class CityConnect {
 			return String.format(MESSAGE_NO_ROUTE, newStartLocation,
 					newEndLocation);
 		} 
-		else 
-		{
+		else {
 			return String.format(MESSAGE_DISTANCE, newStartLocation, newEndLocation,
 					route[position][STORAGE_POSITION_DISTANCE]);
 		}
